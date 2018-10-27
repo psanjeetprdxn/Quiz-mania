@@ -1,0 +1,74 @@
+.wrapper {
+  margin: auto;
+  width: 80%;
+  box-sizing: border-box;
+}
+/*
+*****************************
+       HEADER TITLE
+*****************************
+*/
+h1 {
+  text-align: center;
+  text-transform: capitalize;
+  color: black;
+  font-family: sans-serif;
+}
+h1:hover {
+  color: grey;
+
+}
+/*
+*****************************
+       FORM STYLING
+*****************************
+*/
+div .login {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+div .signup {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding : 20px;
+}
+
+input[type=text], input[type=password], input[type=email] , select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.login h3, .signup h3  {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+label[for=msg] {
+  color:red;
+}
