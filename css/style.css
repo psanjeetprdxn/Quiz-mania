@@ -1,5 +1,11 @@
 .wrapper {
-  margin: auto;
+  margin: 0 auto;
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
   width: 80%;
   box-sizing: border-box;
 }
@@ -71,4 +77,79 @@ input[type=submit]:hover {
 
 label[for=msg] {
   color:red;
+}
+
+
+
+/*
+*****************************
+       NAVIGATION
+*****************************
+*/
+
+ul {
+    display: inline;
+    list-style-type: none;
+}
+
+
+
+nav a {
+  float: right;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px;
+    font-family: sans-serif;
+    color: black;
+}
+
+a:hover {
+    color:grey;
+}
+
+/*
+*****************************
+      LEADERBOARD TABLE
+*****************************
+*/
+.container table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/*
+*****************************
+       PAGINATION
+*****************************
+*/
+.container ul {
+  display: inline;
+  list-style-type: none;
+}
+
+.pagination {
+  text-align: center;
+}
+
+.pagination a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-family: sans-serif;
+  color: black;
+}
+
+.pagination a:hover {
+  color: grey;
 }
