@@ -105,7 +105,7 @@ class Users extends Connection
     public function leaderBoard($init, $rpp)
     {
         $leaderBoards = array();
-        $sql = "SELECT * FROM users ORDER BY score DESC, time_taken ASC LIMIT ?, ?";
+        $sql = "SELECT * FROM users where score is not null ORDER BY score DESC, time_taken ASC LIMIT ?, ?";
         $leaderBoard = $this->conn->prepare($sql);
         $leaderBoard->execute([$init, $rpp]);
         if ($leaderBoard) {
