@@ -12,7 +12,7 @@ function timeout()
         document.getElementById("auto-submit").submit();
     }else{
         document.getElementById('timer').value = timeleft;
-        document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s ";
+        document.getElementById("count-down").innerHTML = minutes + "m " + seconds + "s ";
 
     }
     timeleft--;

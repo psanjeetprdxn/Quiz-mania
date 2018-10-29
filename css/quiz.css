@@ -1,0 +1,10 @@
+.wrapper {
+  margin: 0 auto;
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.count-down {
+  float: right;
+  color:red;
+}

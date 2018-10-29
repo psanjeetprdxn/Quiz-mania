@@ -31,13 +31,12 @@ $questions = $quiz->getQuestions();
     <head>
         <meta charset="utf-8">
         <title>Quiz</title>
-        <link rel="stylesheet" href="css/master.css">
+        <link rel="stylesheet" href="css/quiz.css">
     </head>
     <body onload="timeout()">
-        <div id="demo" style="float:right">
 
-        </div>
         <div class="wrapper">
+          <div id="count-down" class="count-down"></div>
             <form class="" id="auto-submit" action="answer.php" method="post">
 
 
@@ -74,7 +73,6 @@ $questions = $quiz->getQuestions();
                     </tr>
                 </table>
             </div>
-            <hr>
         <?php } ?>
             <input type="hidden" id="timer" value="" name="time">
             <input type="submit" value="Done" onchange="getResult()">
