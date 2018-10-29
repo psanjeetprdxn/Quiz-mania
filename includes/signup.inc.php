@@ -55,7 +55,7 @@ if ($validator->isEmailExists($email)) {
 
 //USER REGISTRATION
 $user = new Users();
-$user->register($anme, $username, $email, $password);
+$user->register($name, $username, $email, $password);
 if ($user) {
   header("Location:../index.php?signupResult=success");
   return;
