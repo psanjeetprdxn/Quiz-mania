@@ -36,10 +36,9 @@ $questions = $quiz->getQuestions();
     <body onload="timeout()">
 
         <div class="wrapper">
+          <h1>Quiz Mania</h1>
           <div id="count-down" class="count-down"></div>
-            <form class="" id="auto-submit" action="answer.php" method="post">
-
-
+          <form class="" id="auto-submit" action="answer.php" method="post">
             <?php foreach ($questions as $question) { ?>
             <div class="question">
                 <table>
@@ -76,10 +75,7 @@ $questions = $quiz->getQuestions();
         <?php } ?>
             <input type="hidden" id="timer" value="" name="time">
             <input type="submit" value="Done" onchange="getResult()">
-            </form>
-            <div class="result">
-
-            </div>
+          </form>
         </div><!--End of wrapper-->
 
 
