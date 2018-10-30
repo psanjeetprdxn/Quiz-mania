@@ -73,7 +73,7 @@ $questions = $quiz->getQuestions();
                 </table>
             </div>
         <?php } ?>
-            <input type="hidden" id="timer" value="" name="time">
+            <input type="hidden" id="time" value="" name="time">
             <input type="submit" value="Done" onchange="getResult()">
           </form>
         </div><!--End of wrapper-->
