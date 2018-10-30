@@ -14,19 +14,19 @@ $users = new Users;
 
 $rpp = 10; //records per page
 $init = 0; //initial record from database
-
-$count = $users->getUsersCount();
-$totalPages = ceil($count / $rpp);
+$page = 1;
+$UserCount = $users->getUsersCount();
+$lastPage = ceil($UserCount / $rpp);
 if (isset($_GET['page'])) {
-    if ($_GET['page'] <= 0) {
+    if ($_GET['page'] <= 1) {
         $page = 1;
-        $init = ($page - 1) * 10;
-    } elseif ($_GET['page'] > $count) {
-        $page = $count;
-        $init = ($page - 1) * 10;
+        $init = ($page - 1) * $rpp;
+    } elseif ($_GET['page'] > $lastPage) {
+        $page = $lastPage;
+        $init = ($page - 1) * $rpp;
     } else {
         $page = $_GET['page'];
-        $init = ($page - 1) * 10;
+        $init = ($page - 1) * $rpp;
     }
 }
 /*
@@ -81,13 +81,15 @@ foreach ($leaderBoards as $leaders) {
 <?php
 
 //Displaying pagination
-$count = $users->getUsersCount();
-$totalPages = ceil($count / $rpp);
 ?>
 <div class="pagination">
 <?php
-for ($i = 1; $i <= $totalPages; $i++) {
-    echo '<a href="leaderBoard.php?page='.$i.'">'.$i.'</a>';
+for ($i = 1; $i <= $lastPage; $i++) {
+    if ($i == $page) {
+      echo '<a>'.$i.'</a>';
+    } else {
+      echo '<a href="leaderBoard.php?page='.$i.'">'.$i.'</a>';
+    }
 }
 ?>
 <div>
