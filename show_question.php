@@ -74,7 +74,7 @@ $questions = $quiz->getQuestions();
             </div>
         <?php } ?>
             <input type="hidden" id="time" value="" name="time">
-            <input type="submit" value="Done" onchange="getResult()">
+            <input type="submit" value="Done" onclick="resetTimerStorage()">
           </form>
         </div><!--End of wrapper-->
 

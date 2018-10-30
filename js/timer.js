@@ -19,3 +19,8 @@ var totalTime = 420;  //In seconds
     		localStorage.timer--;
     		var x = setTimeout(function() {timeout()}, 1000);
 		}
+
+    function resetTimerStorage()
+    {
+      localStorage.setItem("timer", totalTime);
+    }
